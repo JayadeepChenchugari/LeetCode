@@ -1,11 +1,11 @@
 class Solution {
     public boolean checkIfExist(int[] arr) {
-       Set<Integer> seen=new HashSet<>();
-        for(int num:arr){
-            if(seen.contains(2*num)||(num%2==0&&seen.contains(num/2))){
+        HashSet<Integer> set=new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            if(set.contains(arr[i]*2)||arr[i]%2==0&&set.contains(arr[i]/2)){
                 return true;
             }
-            seen.add(num);
+            set.add(arr[i]);
         }
         return false;
     }
