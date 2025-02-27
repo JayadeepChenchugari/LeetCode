@@ -1,23 +1,23 @@
 class Solution {
     public int countConsistentStrings(String allowed, String[] words) {
-        int arr[]=new int[26];
-        for(char i:allowed.toCharArray()){
-            arr[i-'a']=1;
-        }
         int count=0;
-        for(String k:words){
-            count+=findConsistentString(arr,k);
+        for(int i=0;i<words.length;i++){
+            if(isConsistent(allowed,words[i])){
+                count++;
+            }
         }
         return count;
     }
-    public static int findConsistentString(int arr[],String k){
-        int flag=1;
-        for(int i=0;i<k.length();i++){
-            if(arr[k.charAt(i)-'a']==0){
-                flag=0;
-                break;
+    public boolean isConsistent(String s1,String s2){
+        HashMap<Character,Integer> map=new HashMap<>();
+        for(int i=0;i<s1.length();i++){
+            map.put(s1.charAt(i),i);
+        }
+        for(int i=0;i<s2.length();i++){
+            if(!map.containsKey(s2.charAt(i))){
+                return false;
             }
         }
-        return flag;
+        return true;
     }
 }
