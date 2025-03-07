@@ -1,21 +1,16 @@
 class Solution {
-    public boolean isPalindrome(int i,String s) {
-        int n=s.length();
-        if(i>=n/2){
-            return true;
-        }
-        if(s.charAt(i)!=s.charAt(n-i-1)){
-            return false;
-        }
-        return isPalindrome(i+1,s);
-    }
-    public boolean isPalindrome(String s){
-        StringBuilder cleaned=new StringBuilder();
-        for(char c:s.toCharArray()){
-            if(Character.isLetterOrDigit(c)){
-                cleaned.append(Character.toLowerCase(c));
+    public boolean isPalindrome(String s) {
+        s=s.toLowerCase().replace(" ","");
+        s=s.replaceAll("[^a-zA-Z0-9]","");
+        int left=0;
+        int right=s.length()-1;
+        while(left<=right){
+            if(s.charAt(left)!=s.charAt(right)){
+                return false;
             }
+            left++;
+            right--;
         }
-        return isPalindrome(0,cleaned.toString());
+        return true;
     }
 }
