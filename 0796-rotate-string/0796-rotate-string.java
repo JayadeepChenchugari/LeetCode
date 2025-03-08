@@ -3,8 +3,11 @@ class Solution {
         if(s.length()!=goal.length()){
             return false;
         }
-        s=s+s;
-        if(s.contains(goal)){
+        StringBuilder sb=new StringBuilder();
+        sb.append(s);
+        sb.append(s);
+        String S=sb.toString();
+        if(S.contains(goal)){
             return true;
         }
         return false;
