@@ -1,23 +1,18 @@
 class Solution {
     public String reverseWords(String s) {
-        char[] arr=s.toCharArray();
-        int left=0;
-        int right=0;
-        while(right<arr.length){
-            if(arr[right]==' '){
-                reverse(arr,left,right-1);
-                left=right+1;
-            }
-            right++;
+       StringBuilder sb=new StringBuilder();
+       String[] arr=s.split(" ");
+       for(int i=0;i<=arr.length-2;i++){
+        String a=arr[i];
+        for(int j=a.length()-1;j>=0;j--){
+            sb.append(a.charAt(j));
         }
-        reverse(arr,left,right-1);
-        return new String(arr);
+        sb.append(" ");
+       }
+       String b=arr[arr.length-1];
+       for(int i=b.length()-1;i>=0;i--){
+        sb.append(b.charAt(i));
+       }
+       return sb.toString();
     }
-      public void reverse(char[] arr,int left,int right){
-            while(left<right){
-                char temp=arr[left];
-                arr[left++]=arr[right];
-                arr[right--]=temp;
-            }
-        }
 }
