@@ -12,8 +12,10 @@ class Solution {
             }
             else{
                 char temp=arr[left];
-                arr[left++]=arr[right];
-                arr[right--]=temp;
+                arr[left]=arr[right];
+                arr[right]=temp;
+                left++;
+                right--;
             }
         }
         return new String(arr);
