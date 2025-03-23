@@ -4,7 +4,7 @@ class Solution {
         for(int i=0;i<arr.length;i++){
             set.add(arr[i]);
             for(int j=i-1;j>=0;j--){
-                if((arr[i]|arr[j])==arr[j]){
+                if((arr[j]|arr[i])==arr[j]){
                     break;
                 }
                 arr[j]=arr[j]|arr[i];
