@@ -4,9 +4,7 @@ class Solution {
             return 0;
         }
         boolean[] isPrime=new boolean[n];
-        for(int i=2;i<n;i++){
-            isPrime[i]=true;
-        } 
+        Arrays.fill(isPrime,true);
         for(int i=2;i*i<n;i++){
             if(!isPrime[i]){
                 continue;
@@ -15,12 +13,12 @@ class Solution {
                 isPrime[j]=false;
             }
         }
-        int count=0;
+        int cnt=0;
         for(boolean b:isPrime){
             if(b){
-                count++;
+                cnt++;
             }
         }
-        return count;
+        return cnt-2;
     }
 }
