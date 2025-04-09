@@ -13,29 +13,30 @@ class Solution {
         if(head==null||k==0){
             return head;
         }
+        Node temp=head;
+        Node tail=head;
         int length=1;
-        ListNode tail=head;
-        ListNode temp=head;
         while(tail.next!=null){
-            length++;
             tail=tail.next;
+            length++;
         }
         if(k%length==0){
             return head;
         }
         k=k%length;
         tail.next=head;
-        ListNode newNode=findkthnode(head,length-k);
+        ListNode newNode=findkthNode(head,length-k);
         head=newNode.next;
         newNode.next=null;
         return head;
     }
-    public ListNode findkthnode(ListNode head,int k){
+
+    public ListNode findkthNode(ListNode head,int k){
         int cnt=1;
         ListNode temp=head;
         while(temp!=null){
             if(cnt==k){
-               return temp;
+                return temp;
             }
             cnt++;
             temp=temp.next;
