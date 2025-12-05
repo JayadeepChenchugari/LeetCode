@@ -1,58 +1,52 @@
-class Group{
-    int x;
-    int y;
-    int t;
-
-    public Group(int x,int y,int t){
-        this.x=x;
-        this.y=y;
-        this.t=t;
-    }
-}
-
 class Solution {
+    class Pair{
+        int row, col, time;
+        Pair(int r, int c , int t){
+            row=r;
+            col=c;
+            time=t;
+        }
+    }
     public int orangesRotting(int[][] grid) {
         int n=grid.length;
         int m=grid[0].length;
-        int freshOrange=0;
-        int convertedOrange=0;
-        int minTime=0;
-        Queue<Group> q=new LinkedList<>();
-        int row[]={0,-1,0,1};
-        int col[]={-1,0,1,0};
+
+        Queue<Pair> q=new LinkedList<>();
+        int freshCount=0;
 
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 if(grid[i][j]==2){
-                    q.add(new Group(i,j,0));
-                }else if(grid[i][j]==1){
-                    freshOrange++;
+                    q.add(new Pair(i,j,0));
+                }
+                if(grid[i][j]==1){
+                    freshCount++;
                 }
             }
         }
 
+        int dRow[]={-1,1,0,0};
+        int dCol[]={0,0,-1,1};
+
+        int rc=0 , maxTime=0;
+
         while(!q.isEmpty()){
-            int size=q.size();
-            for(int i=0;i<size;i++){
-                Group g=q.remove();
-                int x=g.x;
-                int y=g.y;
-                int t=g.t;
-                minTime=t;
-                for(int j=0;j<4;j++){
-                    int a=x+row[j];
-                    int b=y+col[j];
-                    if(a>=0 && a<n && b>=0 && b<m && grid[a][b]==1){
-                        grid[a][b]=2;
-                        convertedOrange++;
-                        q.add(new Group(a,b,t+1));
-                    }
+            Pair curr=q.poll();
+            int row=curr.row;
+            int col=curr.col;
+            int time=curr.time;
+            maxTime = Math.max(maxTime , time);
+
+            for(int k=0;k<4;k++){
+                int newR=row+dRow[k];
+                int newC=col+dCol[k];
+                if(newR>=0 && newR<n && newC>=0 && newC<m && grid[newR][newC]==1){
+                    grid[newR][newC]=2;
+                    q.add(new Pair(newR , newC , time+1));
+                    rc++;
                 }
             }
         }
-        if(convertedOrange==freshOrange){
-            return minTime;
-        }
-        return -1;
+        return rc==freshCount ? maxTime : -1;
     }
 }
