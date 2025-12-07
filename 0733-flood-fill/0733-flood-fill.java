@@ -1,25 +1,29 @@
 class Solution {
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
-        int temp=image[sr][sc];
-        image[sr][sc]=color;
-        int m=image.length;
-        int n=image[0].length;
-        if(temp==color){
-            return image;
+        int n=image.length;
+        int m=image[0].length;
+        int[][] ans=new int[n][m];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                ans[i][j]=image[i][j];
+            }
         }
-
-        if(sc+1 <n && image[sr][sc+1]==temp){
-            floodFill(image,sr,sc+1,color);
+        int initcolor = image[sr][sc];
+        dfs(image , sr , sc  , initcolor , color ,  ans);
+        return ans;
+    }
+    public static void dfs(int[][] image , int row , int col , int initcolor  , int color , int[][] ans){
+         ans[row][col]=color;
+        int n=image.length;
+        int m= image[0].length;
+        int drow[] = {1,-1,0,0};
+        int dcol[]= {0,0,1,-1};
+        for(int i=0;i<4;i++){
+            int nrow= row + drow[i];
+            int ncol= col + dcol[i];
+            if(nrow < n && nrow>=0 && ncol>=0 && ncol< m && image[nrow][ncol]== initcolor && ans[nrow][ncol]!=color ){
+                dfs(image , nrow , ncol ,initcolor ,  color , ans);
+            }
         }
-        if(sc-1>=0 && image[sr][sc-1]==temp){
-            floodFill(image,sr,sc-1,color);
-        }
-        if(sr-1>=0 && image[sr-1][sc]==temp){
-            floodFill(image,sr-1,sc,color);
-        }
-        if(sr+1<m && image[sr+1][sc]==temp){
-            floodFill(image,sr+1,sc,color);
-        }
-        return image;
-    } 
+    }
 }
