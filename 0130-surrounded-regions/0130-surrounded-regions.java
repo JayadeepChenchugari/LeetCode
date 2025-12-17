@@ -1,38 +1,58 @@
 class Solution {
-    public void solve(char[][] board) {
-        int height = board.length, width = board[0].length;
 
-        // Step 1: Mark border-connected 'O's
-        for (int i = 0; i < height; i++) {
-            if (board[i][0] == 'O') dfs(board, i, 0);
-            if (board[i][width - 1] == 'O') dfs(board, i, width - 1);
-        }
+    static void dfs(int[] delrow, int[] delcol, int[][] vis, char[][] board, int row, int col) {
+        vis[row][col] = 1;
+        int n = board.length;
+        int m = board[0].length;
 
-        for (int j = 0; j < width; j++) {
-            if (board[0][j] == 'O') dfs(board, 0, j);
-            if (board[height - 1][j] == 'O') dfs(board, height - 1, j);
-        }
+        for (int i = 0; i < 4; i++) {
+            int nrow = row + delrow[i];
+            int ncol = col + delcol[i];
 
-        // Step 2 & 3: Flip surrounded 'O' to 'X', and safe 'S' back to 'O'
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if (board[i][j] == 'O') board[i][j] = 'X';
-                if (board[i][j] == 'S') board[i][j] = 'O';
+            if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m
+                    && vis[nrow][ncol] == 0
+                    && board[nrow][ncol] == 'O') {
+
+                dfs(delrow, delcol, vis, board, nrow, ncol);
             }
         }
     }
 
-    public void dfs(char[][] board, int i, int j) {
-        if (i < 0 || j < 0 || i >= board.length || j >= board[0].length ||
-            board[i][j] == 'X' || board[i][j] == 'S') {
-            return;
+    public void solve(char[][] board) {
+        int n = board.length;
+        int m = board[0].length;
+        int[][] vis = new int[n][m];
+
+        int[] delrow = {-1, 0, 1, 0};
+        int[] delcol = {0, 1, 0, -1};
+
+        // First & last column
+        for (int i = 0; i < n; i++) {
+            if (vis[i][0] == 0 && board[i][0] == 'O') {
+                dfs(delrow, delcol, vis, board, i, 0);
+            }
+            if (vis[i][m - 1] == 0 && board[i][m - 1] == 'O') {
+                dfs(delrow, delcol, vis, board, i, m - 1);
+            }
         }
 
-        board[i][j] = 'S'; // Mark as safe
+        // First & last row
+        for (int j = 0; j < m; j++) {
+            if (vis[0][j] == 0 && board[0][j] == 'O') {
+                dfs(delrow, delcol, vis, board, 0, j);
+            }
+            if (vis[n - 1][j] == 0 && board[n - 1][j] == 'O') {
+                dfs(delrow, delcol, vis, board, n - 1, j);
+            }
+        }
 
-        dfs(board, i - 1, j); // Up
-        dfs(board, i + 1, j); // Down
-        dfs(board, i, j - 1); // Left
-        dfs(board, i, j + 1); // Right
+        // Flip unvisited 'O' to 'X'
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (vis[i][j] == 0 && board[i][j] == 'O') {
+                    board[i][j] = 'X';
+                }
+            }
+        }
     }
 }
