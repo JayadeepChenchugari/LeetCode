@@ -1,22 +1,58 @@
+class DisjointSet{
+    int[] parent;
+    int[] size;
+    public DisjointSet(int n){
+        parent=new int[n];
+        size=new int[n];
+        for(int i=0;i<n;i++){
+            parent[i]=i;
+            size[i]=1;
+        }
+    }
+    int find(int x){
+        if(parent[x]!=x){
+            parent[x]=find(parent[x]);
+        }
+        return parent[x];
+    }
+    void unionBySize(int x , int y){
+        int px=find(x);
+        int py=find(y);
+        if(px==py){
+            return;
+        }
+        if(size[px]<size[py]){
+            parent[px]=py;
+            size[py]+=size[px];
+        }
+        else if(size[px]>size[py]){
+            parent[py]=px;
+            size[px]+=size[py];
+        }
+        else{
+            parent[px]=py;
+            size[py]+=size[px];
+        }
+        return;
+    }
+}
 class Solution {
     public int findCircleNum(int[][] isConnected) {
         int n=isConnected.length;
-        boolean[] visited=new boolean[n];
-        int count=0;
+        DisjointSet ds=new DisjointSet(n);
         for(int i=0;i<n;i++){
-            if(!visited[i]){
-                dfs(isConnected,visited,i);
-                count++;
+            for(int j=0;j<n;j++){
+                if(isConnected[i][j]==1){
+                    ds.unionBySize(i , j);
+                }
             }
         }
-        return count;
-    }
-    public void dfs(int[][] isConnected,boolean[] visited,int curr){
-        visited[curr]=true;
-        for(int i=0;i<isConnected.length;i++){
-            if(isConnected[curr][i]==1&&!visited[i]){
-                dfs(isConnected,visited,i);
+        int cnt=0;
+        for(int i=0;i<n;i++){
+            if(ds.find(i)==i){
+                cnt++;
             }
         }
+        return cnt;
     }
 }
