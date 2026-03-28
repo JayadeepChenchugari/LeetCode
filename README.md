@@ -13,6 +13,7 @@
 | ------- | ------- |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
+| [0994-rotting-oranges](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
 | [1319-number-of-operations-to-make-network-connected](https://github.com/JayadeepChenchugari/LeetCode/tree/main/1319-number-of-operations-to-make-network-connected/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
@@ -36,6 +37,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
+| [0994-rotting-oranges](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -44,4 +46,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
+## Matrix
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0994-rotting-oranges](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
 <!---LeetCode Topics End-->
