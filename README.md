@@ -11,6 +11,7 @@
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0542-01-matrix](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0542-01-matrix/) | Medium |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
 | [0994-rotting-oranges](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
@@ -36,6 +37,7 @@
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0542-01-matrix](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0542-01-matrix/) | Medium |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
 | [0994-rotting-oranges](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
 ## String
@@ -49,5 +51,10 @@
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0542-01-matrix](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0542-01-matrix/) | Medium |
 | [0994-rotting-oranges](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0542-01-matrix](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0542-01-matrix/) | Medium |
 <!---LeetCode Topics End-->
