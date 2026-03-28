@@ -1,49 +1,48 @@
-class Pair{
-    int row,col;
-    Pair(int row,int col){
-        this.row=row;
-        this.col=col;
-    }
-}
 class Solution {
+    class Pair{
+        int first;
+        int second;
+        int third;
+        Pair(int first , int second , int third){
+            this.first=first;
+            this.second=second;
+            this.third=third;
+        }
+    }
     public int[][] updateMatrix(int[][] mat) {
-        int m=mat.length,n=mat[0].length;
-        int[][] res=new int[m][n];
+        int n=mat.length;
+        int m=mat[0].length;
+        int[][] vis=new int[n][m];
+        int[][] dis=new int[n][m];
         Queue<Pair> q=new LinkedList<>();
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
                 if(mat[i][j]==0){
-                    q.add(new Pair(i,j));
+                    q.add(new Pair(i,j,0));
+                    vis[i][j]=1;
                 }
                 else{
-                    res[i][j]=-1;
+                    vis[i][j]=0;
                 }
             }
         }
-        int[][] dirs={{-1,0},{0,1},{1,0},{0,-1}};
-
+        int[] drow={-1 , 0 , 1, 0};
+        int[] dcol={0,1,0,-1};
         while(!q.isEmpty()){
-            int size=q.size();
-            for(int i=0;i<size;i++){
-                Pair pair=q.poll();
-                for(int[] dir:dirs){
-                    int x=pair.row+dir[0];
-                    int y=pair.col+dir[1];
-                    if(x<0|| y<0 || x>=m || y>=n || res[x][y]!=-1){
-                        continue;
-                    }
-                    if(res[x][y]==-1){
-                        if(mat[x][y]==0){
-                            res[x][y]=0;
-                        }
-                        else{
-                            res[x][y]=res[pair.row][pair.col]+1;
-                        }
-                        q.add(new Pair(x,y));
-                    }
+            int row=q.peek().first;
+            int col=q.peek().second;
+            int steps=q.peek().third;
+            q.remove();
+            dis[row][col]=steps;
+            for(int i=0;i<4;i++){
+                int nrow=row+drow[i];
+                int ncol=col+dcol[i];
+                if(nrow>=0 && nrow<n && ncol>=0 && ncol<m&& vis[nrow][ncol]==0){
+                    vis[nrow][ncol]=1;
+                    q.add(new Pair(nrow , ncol , steps+1));
                 }
             }
         }
-        return res;
+        return dis;
     }
 }
