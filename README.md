@@ -7,6 +7,7 @@
 | [0130-surrounded-regions](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
+| [0785-is-graph-bipartite](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [1020-number-of-enclaves](https://github.com/JayadeepChenchugari/LeetCode/tree/main/1020-number-of-enclaves/) | Medium |
 | [1319-number-of-operations-to-make-network-connected](https://github.com/JayadeepChenchugari/LeetCode/tree/main/1319-number-of-operations-to-make-network-connected/) | Medium |
@@ -17,6 +18,7 @@
 | [0542-01-matrix](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0542-01-matrix/) | Medium |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
+| [0785-is-graph-bipartite](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0994-rotting-oranges](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
 | [1020-number-of-enclaves](https://github.com/JayadeepChenchugari/LeetCode/tree/main/1020-number-of-enclaves/) | Medium |
 | [1319-number-of-operations-to-make-network-connected](https://github.com/JayadeepChenchugari/LeetCode/tree/main/1319-number-of-operations-to-make-network-connected/) | Medium |
@@ -26,6 +28,7 @@
 | [0130-surrounded-regions](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
+| [0785-is-graph-bipartite](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [1020-number-of-enclaves](https://github.com/JayadeepChenchugari/LeetCode/tree/main/1020-number-of-enclaves/) | Medium |
 | [1319-number-of-operations-to-make-network-connected](https://github.com/JayadeepChenchugari/LeetCode/tree/main/1319-number-of-operations-to-make-network-connected/) | Medium |
@@ -33,6 +36,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
+| [0785-is-graph-bipartite](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [1319-number-of-operations-to-make-network-connected](https://github.com/JayadeepChenchugari/LeetCode/tree/main/1319-number-of-operations-to-make-network-connected/) | Medium |
 ## Hash Table
