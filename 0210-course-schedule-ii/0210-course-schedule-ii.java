@@ -32,6 +32,7 @@ class Solution {
                 }
             }
         }
+         if (ans.size() != numCourses) return new int[0];
         int[] a=new int[ans.size()];
         for(int i=0;i<a.length;i++){
             a[i]=ans.get(i);
