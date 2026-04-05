@@ -5,6 +5,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0130-surrounded-regions](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
+| [0207-course-schedule](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0207-course-schedule/) | Medium |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0785-is-graph-bipartite/) | Medium |
@@ -16,6 +17,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0130-surrounded-regions](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
+| [0207-course-schedule](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0207-course-schedule/) | Medium |
 | [0542-01-matrix](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0542-01-matrix/) | Medium |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
@@ -37,6 +39,7 @@
 ## Graph Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0207-course-schedule](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0207-course-schedule/) | Medium |
 | [0547-number-of-provinces](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0547-number-of-provinces/) | Medium |
 | [0785-is-graph-bipartite](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0785-is-graph-bipartite/) | Medium |
 | [0802-find-eventual-safe-states](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0802-find-eventual-safe-states/) | Medium |
@@ -77,5 +80,6 @@
 ## Topological Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0207-course-schedule](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0207-course-schedule/) | Medium |
 | [0802-find-eventual-safe-states](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0802-find-eventual-safe-states/) | Medium |
 <!---LeetCode Topics End-->
