@@ -16,6 +16,7 @@
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0127-word-ladder](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0127-word-ladder/) | Hard |
 | [0130-surrounded-regions](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0207-course-schedule](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0207-course-schedule/) | Medium |
 | [0542-01-matrix](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0542-01-matrix/) | Medium |
@@ -48,6 +49,7 @@
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0127-word-ladder](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0127-word-ladder/) | Hard |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 ## Array
@@ -61,6 +63,7 @@
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0127-word-ladder](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0127-word-ladder/) | Hard |
 | [0721-accounts-merge](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0721-accounts-merge/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
