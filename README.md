@@ -79,10 +79,19 @@
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0070-climbing-stairs](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
 | [0542-01-matrix](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0542-01-matrix/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0207-course-schedule](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0207-course-schedule/) | Medium |
 | [0802-find-eventual-safe-states](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0802-find-eventual-safe-states/) | Medium |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0070-climbing-stairs](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
+## Memoization
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0070-climbing-stairs](https://github.com/JayadeepChenchugari/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
 <!---LeetCode Topics End-->
